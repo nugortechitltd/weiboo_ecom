@@ -66,6 +66,8 @@ Route::post('/password/reset/send', [UserController::class, 'password_reset_send
 Route::get('/password/reset/form/{token}', [UserController::class, 'password_reset_form'])->name('password.reset.form');
 Route::post('/password/reset/set/', [UserController::class, 'password_reset_set'])->name('password.reset.set');
 Route::get('user/single/delete/{user_id}', [UserController::class, 'user_single_delete'])->name('user.single.delete');
+Route::get('user/single/edit/{user_id}', [UserController::class, 'user_single_edit'])->name('user.single.edit');
+Route::post('user/single/update', [UserController::class, 'user_single_update'])->name('user.single.update');
 
 // Profile
 Route::get('user/profile/', [ProfileController::class, 'profile'])->name('profile');

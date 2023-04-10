@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Notification;
+use Image;
 
 class UserController extends Controller
 {
@@ -102,4 +103,14 @@ class UserController extends Controller
         }
         return back()->withSuccess('Successfully deleted');
     }
+
+    // user_single_edit
+    function user_single_edit($user_id) {
+        $user = User::find($user_id);
+        return view('backend.user.user_edit', [
+            'user' => $user,
+        ]);
+    }
+
+    
 }

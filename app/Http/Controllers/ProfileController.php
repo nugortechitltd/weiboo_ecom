@@ -111,7 +111,7 @@ class ProfileController extends Controller
         ]);
     }
 
-    // user update
+    // user edit
     function user_edit($user_id) {
         $users = User::find($user_id);
         return view('backend.user.user_update', [
