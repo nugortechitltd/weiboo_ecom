@@ -339,12 +339,12 @@
                             </a>
                         </li>
                         <!-- Role -->
-                        <li class="has-sub {{ Request::is('role*') ? 'active' : '' }}">
+                        {{-- <li class="has-sub {{ Request::is('role*') ? 'active' : '' }}">
                             <a class="sidenav-item-link" href="{{ route('role') }}">
                                 <i class="mdi mdi-account-settings"></i>
                                 <span class="nav-text">Role</span>
                             </a>
-                        </li>
+                        </li> --}}
                         <!-- Team -->
                         <!-- Team -->
                         <li class="has-sub {{ Request::is('team*') ? 'active' : '' }}">
