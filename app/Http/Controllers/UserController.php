@@ -92,7 +92,15 @@ class UserController extends Controller
 
     //user_single_delete
     function user_single_delete($user_id) {
-        User::find($user_id)->delete();
+        if(User::find($user_id)->first()->image == null) {
+            $image = User::where('id', $user_id)->first()->image;
+            $delete_from = public_path('uploads/users/'.$image);
+            unlink($delete_from);
+            User::find($user_id)->delete();
+        } else {
+            User::find($user_id)->delete(); 
+        }
+        // User::find($user_id)->delete();
         return back()->withSuccess('Successfully deleted');
     }
 }

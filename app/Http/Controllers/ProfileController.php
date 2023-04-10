@@ -208,30 +208,4 @@ class ProfileController extends Controller
             }
         }
     }
-
-    // user_delete
-    // function user_delete($user_id) {
-        // if(User::find($user_id)->first()->image == null) {
-        //     User::find($user_id)->delete();
-        // } else {
-        //     $image = User::where('id', $user_id)->first()->image;
-        //     $delete_from = public_path('uploads/users/'.$image);
-        //     unlink($delete_from);
-        //     User::find($user_id)->delete();
-        // }
-        // User::find($user_id)->delete();
-        // return back()->withSuccess('User single item deleted successfully');
-        // return redirect()->route('user.list')->withSuccess('User single item deleted successfully');
-        // if(User::find($user_id)->first()->image) {
-
-        // }
-        // if(User::where('id', $user_id)->first()->image != null)  {
-        //     $image = User::where('id', $user_id)->first()->image;
-        //     $delete_from = public_path('uploads/users/'.$image);
-        //     unlink($delete_from);
-        // } else {
-        //     User::find($user_id)->delete();
-        // }
-        // return redirect()->route('user.list')->withSuccess('User single item deleted successfully');
-    // }
 }
