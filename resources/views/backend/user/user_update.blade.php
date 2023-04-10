@@ -31,7 +31,7 @@
 </div>
 <div class="card bg-white profile-content">
     <div class="row">
-        <div class="col-lg-4 col-xl-3">
+        {{-- <div class="col-lg-4 col-xl-3">
             <div class="profile-content-left profile-left-spacing">
 
                 <hr class="w-100">
@@ -82,9 +82,9 @@
                     
                 </div>
             </div>
-        </div>
+        </div> --}}
 
-        <div class="col-lg-8 col-xl-9">
+        <div class="col-lg-12 col-xl-12">
             <div class="profile-content-right profile-right-spacing py-5">
                 <ul class="nav nav-tabs px-3 px-xl-5 nav-style-border" id="myProfileTab" role="tablist">
                     <li class="nav-item" role="presentation">
