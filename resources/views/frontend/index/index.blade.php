@@ -121,15 +121,15 @@
                 data-swiper="pagination">
                 <div class="swiper-wrapper" id="swiper-wrapper-4013026477cc1587" aria-live="off"
                     style="transform: translate3d(-2860px, 0px, 0px); transition-duration: 0ms;">
-                    @foreach ($maincategories as $maincategory)
-                    <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="{{$maincategory->id}}" role="group"
+                    @foreach ($categories as $category)
+                    <div class="swiper-slide swiper-slide-duplicate-active" data-swiper-slide-index="{{$category->id}}" role="group"
                         aria-label="1 / 4" style="width: 327.5px; margin-right: 30px;">
                         <div class="collection-item">
-                            <a href="{{route('shop')}}"><img src="{{asset('uploads/maincategory')}}/{{$maincategory->maincategory_image}}" alt="collection-image">
+                            <a href="{{route('shop')}}"><img src="{{asset('uploads/category')}}/{{$category->category_image}}" alt="collection-image">
                             </a>
-                            <p class="item-quantity">{{App\Models\Product::where('maincategory_id', $maincategory->id)->count()}} <span>items</span></p>
+                            <p class="item-quantity">{{App\Models\Product::where('category_id', $category->id)->count()}} <span>items</span></p>
                             <a href="{{route('shop')}}" class="item-catagory-box">
-                                <h3 class="title">{{$maincategory->maincategory_name}}</h3>
+                                <h3 class="title">{{$category->category_name}}</h3>
                             </a>
                         </div>
                     </div>

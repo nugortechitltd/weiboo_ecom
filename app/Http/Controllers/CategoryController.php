@@ -33,7 +33,7 @@ class CategoryController extends Controller
         $extension = $category_image->getClientOriginalExtension();
         $after_replace = str_replace(' ', '-', $request->category_name);
         $file_name = Str::lower($after_replace).'-'.rand(1000, 9999).'.'.$extension;
-        Image::make($category_image)->resize(300, 200)->save(public_path('uploads/category/'.$file_name));
+        Image::make($category_image)->resize(338, 450)->save(public_path('uploads/category/'.$file_name));
         
         Category::find($category_id)->update([
             'category_image' => $file_name,
@@ -77,7 +77,7 @@ class CategoryController extends Controller
             $extension = $upload_img->getClientOriginalExtension();
             $after_replace = str_replace(' ', '-', $request->category_name);
             $file_name = $after_replace.'-'.rand(1000, 9999).'.'.$extension;
-            Image::make($upload_img)->resize(300, 200)->save(public_path('uploads/category/'.$file_name));
+            Image::make($upload_img)->resize(338, 450)->save(public_path('uploads/category/'.$file_name));
             Category::find($request->category_id)->update([
                 'category_name' => $request->category_name,
                 'category_image' => $file_name,

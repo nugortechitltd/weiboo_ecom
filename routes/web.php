@@ -95,12 +95,12 @@ Route::get('/subcategory/delete/{subcategory_id}', [SubcategoryController::class
 
 
 // Maincategory
-Route::get('/category/maincategory/add', [MaincategoryController::class, 'maincategory'])->name('maincategory');
-Route::get('/category/maincategory/list', [MaincategoryController::class, 'maincategory_list'])->name('maincategory.list');
-Route::post('/maincategory/store', [MaincategoryController::class, 'maincategory_store'])->name('maincategory.store');
-Route::get('/maincategory/edit/{maincategory_id}', [MaincategoryController::class, 'maincategory_edit'])->name('maincategory.edit');
-Route::post('/maincategory/update/', [MaincategoryController::class, 'maincategory_update'])->name('maincategory.update');
-Route::get('/maincategory/delete/{maincategory_id}', [MaincategoryController::class, 'maincategory_delete'])->name('maincategory.delete');
+// Route::get('/category/maincategory/add', [MaincategoryController::class, 'maincategory'])->name('maincategory');
+// Route::get('/category/maincategory/list', [MaincategoryController::class, 'maincategory_list'])->name('maincategory.list');
+// Route::post('/maincategory/store', [MaincategoryController::class, 'maincategory_store'])->name('maincategory.store');
+// Route::get('/maincategory/edit/{maincategory_id}', [MaincategoryController::class, 'maincategory_edit'])->name('maincategory.edit');
+// Route::post('/maincategory/update/', [MaincategoryController::class, 'maincategory_update'])->name('maincategory.update');
+// Route::get('/maincategory/delete/{maincategory_id}', [MaincategoryController::class, 'maincategory_delete'])->name('maincategory.delete');
 
 
 // Product

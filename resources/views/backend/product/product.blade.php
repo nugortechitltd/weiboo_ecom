@@ -46,18 +46,6 @@
                                         @enderror
                                     </div>
                                     <div class="col-md-6 mt-3">
-                                        <label class="form-label">Main Category</label>
-                                        <select name="maincategory_id">
-                                                <option value="">Select maincategory</option>
-                                                @foreach ($maincategories as $category)
-                                                    <option value="{{$category->id}}">{{$category->maincategory_name}}</option>
-                                                @endforeach
-                                        </select>
-                                        @error('maincategory_id')
-                                            <strong class="text-danger">{{$message}}</strong>
-                                        @enderror
-                                    </div>
-                                    <div class="col-md-6 mt-3">
                                         <label class="form-label">Brand</label>
                                         <select name="brand_id">
                                             <option value="">Select brand</option>
@@ -73,14 +61,14 @@
                                             <strong class="text-danger">{{$message}}</strong>
                                         @enderror
                                     </div>
-                                    <div class="col-md-3 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label class="form-label">Product price</label>
                                         <input type="number" name="product_price" class="form-control " placeholder="Product price" >
                                         @error('product_price')
                                             <strong class="text-danger">{{$message}}</strong>
                                         @enderror
                                     </div>
-                                    <div class="col-md-3 mt-3">
+                                    <div class="col-md-6 mt-3">
                                         <label class="form-label">Discount (%)</label>
                                         <input type="number" name="discount" class="form-control " placeholder="Product discount" >
                                     </div>
@@ -134,132 +122,6 @@
                                 </form>
                             </div>
                         </div>
-                        {{-- <div class="col-lg-4">
-                            <div class="ec-vendor-img-upload">
-                                <div class="ec-vendor-main-img">
-                                    <div class="avatar-upload">
-                                        <div class="avatar-edit">
-                                            <input type='file' id="imageUpload" class="ec-image-upload"
-                                                accept=".png, .jpg, .jpeg" />
-                                            <label for="imageUpload"><img
-                                                    src="assets/img/icons/edit.svg"
-                                                    class="svg_img header_svg" alt="edit" /></label>
-                                        </div>
-                                        <div class="avatar-preview ec-preview">
-                                            <div class="imagePreview ec-div-preview">
-                                                <img class="ec-image-preview"
-                                                    src="assets/img/products/details-big.png"
-                                                    alt="edit" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="thumb-upload-set colo-md-12">
-                                        <div class="thumb-upload">
-                                            <div class="thumb-edit">
-                                                <input type='file' id="thumbUpload01"
-                                                    class="ec-image-upload"
-                                                    accept=".png, .jpg, .jpeg" />
-                                                <label for="imageUpload"><img
-                                                        src="assets/img/icons/edit.svg"
-                                                        class="svg_img header_svg" alt="edit" /></label>
-                                            </div>
-                                            <div class="thumb-preview ec-preview">
-                                                <div class="image-thumb-preview">
-                                                    <img class="image-thumb-preview ec-image-preview"
-                                                        src="assets/img/products/details-sm-2.png"
-                                                        alt="edit" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="thumb-upload">
-                                            <div class="thumb-edit">
-                                                <input type='file' id="thumbUpload02"
-                                                    class="ec-image-upload"
-                                                    accept=".png, .jpg, .jpeg" />
-                                                <label for="imageUpload"><img
-                                                        src="assets/img/icons/edit.svg"
-                                                        class="svg_img header_svg" alt="edit" /></label>
-                                            </div>
-                                            <div class="thumb-preview ec-preview">
-                                                <div class="image-thumb-preview">
-                                                    <img class="image-thumb-preview ec-image-preview"
-                                                        src="assets/img/products/details-sm-4.png"
-                                                        alt="edit" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="thumb-upload">
-                                            <div class="thumb-edit">
-                                                <input type='file' id="thumbUpload03"
-                                                    class="ec-image-upload"
-                                                    accept=".png, .jpg, .jpeg" />
-                                                <label for="imageUpload"><img
-                                                        src="assets/img/icons/edit.svg"
-                                                        class="svg_img header_svg" alt="edit" /></label>
-                                            </div>
-                                            <div class="thumb-preview ec-preview">
-                                                <div class="image-thumb-preview">
-                                                    <img class="image-thumb-preview ec-image-preview"
-                                                        src="assets/img/products/details-sm-1.png"
-                                                        alt="edit" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="thumb-upload">
-                                            <div class="thumb-edit">
-                                                <input type='file' id="thumbUpload04"
-                                                    class="ec-image-upload"
-                                                    accept=".png, .jpg, .jpeg" />
-                                                <label for="imageUpload"><img
-                                                        src="assets/img/icons/edit.svg"
-                                                        class="svg_img header_svg" alt="edit" /></label>
-                                            </div>
-                                            <div class="thumb-preview ec-preview">
-                                                <div class="image-thumb-preview">
-                                                    <img class="image-thumb-preview ec-image-preview"
-                                                        src="assets/img/products/details-sm-2.png"
-                                                        alt="edit" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="thumb-upload">
-                                            <div class="thumb-edit">
-                                                <input type='file' id="thumbUpload05"
-                                                    class="ec-image-upload"
-                                                    accept=".png, .jpg, .jpeg" />
-                                                <label for="imageUpload"><img
-                                                        src="assets/img/icons/edit.svg"
-                                                        class="svg_img header_svg" alt="edit" /></label>
-                                            </div>
-                                            <div class="thumb-preview ec-preview">
-                                                <div class="image-thumb-preview">
-                                                    <img class="image-thumb-preview ec-image-preview"
-                                                        src="assets/img/products/details-sm-3.png"
-                                                        alt="edit" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="thumb-upload">
-                                            <div class="thumb-edit">
-                                                <input type='file' id="thumbUpload06"
-                                                    class="ec-image-upload"
-                                                    accept=".png, .jpg, .jpeg" />
-                                                <label for="imageUpload"><img
-                                                        src="assets/img/icons/edit.svg"
-                                                        class="svg_img header_svg" alt="edit" /></label>
-                                            </div>
-                                            <div class="thumb-preview ec-preview">
-                                                <div class="image-thumb-preview">
-                                                    <img class="image-thumb-preview ec-image-preview"
-                                                        src="assets/img/products/details-sm-4.png"
-                                                        alt="edit" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
             </div>

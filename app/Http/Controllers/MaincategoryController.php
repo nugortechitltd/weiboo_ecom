@@ -58,42 +58,42 @@ class MaincategoryController extends Controller
     }
 
     // maincategory update
-    function maincategory_update(Request $request) {
-        $request->validate([
-            'maincategory_name' => 'required',
-        ]);
-        if($request->maincategory_image == null) {
-            Maincategory::find($request->maincategory_id)->update([
-                'maincategory_name' => $request->maincategory_name,
-                'added_by' => Auth::id(),
-                'updated_at' => Carbon::now(),
-            ]);
-            return back()->withSuccess('Category updated successfully');
-        } else {
-            $category_img_del = Maincategory::where('id', $request->maincategory_id)->first()->maincategory_image;
-            $delete_from = public_path('uploads/maincategory/'.$category_img_del);
-            unlink($delete_from);
-            $upload_img = $request->maincategory_image;
-            $extension = $upload_img->getClientOriginalExtension();
-            $after_replace = str_replace(' ', '-', $request->maincategory_name);
-            $file_name = $after_replace.'-'.rand(1000, 9999).'.'.$extension;
-            Image::make($upload_img)->resize(338, 450)->save(public_path('uploads/maincategory/'.$file_name));
-            Maincategory::find($request->maincategory_id)->update([
-                'maincategory_name' => $request->maincategory_name,
-                'maincategory_image' => $file_name,
-                'added_by' => Auth::id(),
-                'updated_at' => Carbon::now(),
-            ]);
-            return back()->withSuccess('Maincategory updated successfully');
-        }
-    }
+    // function maincategory_update(Request $request) {
+    //     $request->validate([
+    //         'maincategory_name' => 'required',
+    //     ]);
+    //     if($request->maincategory_image == null) {
+    //         Maincategory::find($request->maincategory_id)->update([
+    //             'maincategory_name' => $request->maincategory_name,
+    //             'added_by' => Auth::id(),
+    //             'updated_at' => Carbon::now(),
+    //         ]);
+    //         return back()->withSuccess('Category updated successfully');
+    //     } else {
+    //         $category_img_del = Maincategory::where('id', $request->maincategory_id)->first()->maincategory_image;
+    //         $delete_from = public_path('uploads/maincategory/'.$category_img_del);
+    //         unlink($delete_from);
+    //         $upload_img = $request->maincategory_image;
+    //         $extension = $upload_img->getClientOriginalExtension();
+    //         $after_replace = str_replace(' ', '-', $request->maincategory_name);
+    //         $file_name = $after_replace.'-'.rand(1000, 9999).'.'.$extension;
+    //         Image::make($upload_img)->resize(338, 450)->save(public_path('uploads/maincategory/'.$file_name));
+    //         Maincategory::find($request->maincategory_id)->update([
+    //             'maincategory_name' => $request->maincategory_name,
+    //             'maincategory_image' => $file_name,
+    //             'added_by' => Auth::id(),
+    //             'updated_at' => Carbon::now(),
+    //         ]);
+    //         return back()->withSuccess('Maincategory updated successfully');
+    //     }
+    // }
 
     // maincategory delete
-    function maincategory_delete($maincategory_id) {
-        $category_image = Maincategory::where('id', $maincategory_id)->first()->maincategory_image;
-        $delete_from = public_path('uploads/maincategory/'.$category_image);
-        unlink($delete_from);
-        Maincategory::find($maincategory_id)->delete();
-        return back()->withSuccess('Maincategory item deleted successfully');
-    }
+    // function maincategory_delete($maincategory_id) {
+    //     $category_image = Maincategory::where('id', $maincategory_id)->first()->maincategory_image;
+    //     $delete_from = public_path('uploads/maincategory/'.$category_image);
+    //     unlink($delete_from);
+    //     Maincategory::find($maincategory_id)->delete();
+    //     return back()->withSuccess('Maincategory item deleted successfully');
+    // }
 }

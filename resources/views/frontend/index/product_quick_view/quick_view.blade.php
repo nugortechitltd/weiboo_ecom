@@ -70,7 +70,6 @@
         </form>
         <div class="product-uniques">
             <span class="catagorys product-unipue"><span>Categories: </span> {{$product->rel_to_category->category_name}} , {{$product->rel_to_subcategory->subcategory_name}}
-            {{$product->rel_to_maincategory->maincategory_name == null ? '' : ', '.$product->rel_to_maincategory->maincategory_name}}
             </span>
         </div>
         {{-- <div class="share-social">

@@ -100,7 +100,6 @@ class UserController extends Controller
         } else {
             User::find($user_id)->delete(); 
         }
-        // User::find($user_id)->delete();
         return back()->withSuccess('Successfully deleted');
     }
 }

@@ -24,7 +24,6 @@
                                     <th>Product name</th>
                                     <th>Category</th>
                                     <th>Subategory</th>
-                                    <th>Maincategory</th>
                                     <th>Price(Tk)</th>
                                     <th>Discount(%)</th>
                                     <th>Price(Discount*)(Tk)</th>
@@ -43,7 +42,6 @@
                                     <td>{{$product->product_name}}</td>
                                     <td>{{$product->rel_to_category->category_name}}</td>
                                     <td>{{$product->rel_to_subcategory->subcategory_name}}</td>
-                                    <td>{{($product->maincategory_id == null) ? 'Na' : $product->rel_to_maincategory->maincategory_name}}</td>
                                     <td>{{$product->product_price}}</td>
                                     <td>{{$product->discount == null ? 'Na' : $product->discount}}</td>
                                     <td>{{$product->after_discount}}</td>

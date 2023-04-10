@@ -179,9 +179,9 @@
                         </form>
                             <div class="product-uniques">
                                 <span class="catagorys product-unipue"><span>Categories: </span> {{App\Models\Category::where('id', $details->first()->category_id)->first()->category_name}}, {{App\Models\Subcategory::where('id', $details->first()->subcategory_id)->first()->subcategory_name}},
-                                @if (App\Models\Maincategory::where('id', $details->first()->maincategory_id)->first()->maincategory_name != null)
+                                {{-- @if (App\Models\Maincategory::where('id', $details->first()->maincategory_id)->first()->maincategory_name != null)
                                     {{App\Models\Maincategory::where('id', $details->first()->maincategory_id)->first()->maincategory_name}}
-                                @endif
+                                @endif --}}
                                 </span>
                             </div>
                             <div class="share-social">

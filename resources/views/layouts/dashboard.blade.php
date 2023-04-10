@@ -143,7 +143,7 @@
                                             <span class="nav-text">Add Subcategory</span>
                                         </a>
                                     </li>
-                                    <li class="{{ Request::is('category/maincategory/list') ? 'active' : '' }}">
+                                    {{-- <li class="{{ Request::is('category/maincategory/list') ? 'active' : '' }}">
                                         <a class="sidenav-item-link" href="{{ route('maincategory.list') }}">
                                             <span class="nav-text">All Maincategory</span>
                                         </a>
@@ -152,7 +152,7 @@
                                         <a class="sidenav-item-link" href="{{ route('maincategory') }}">
                                             <span class="nav-text">Maincategory</span>
                                         </a>
-                                    </li>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </li>

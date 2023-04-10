@@ -22,11 +22,9 @@ class ProductController extends Controller
     //product blade
     function product() {
         $categories = Category::all();
-        $maincategories = Maincategory::all();
         $brands = Brand::all();
         return view('backend.product.product', [
             'categories' => $categories,
-            'maincategories' => $maincategories,
             'brand' => $brands,
         ]);
     }
@@ -65,7 +63,6 @@ class ProductController extends Controller
             'subcategory_id' => $request->subcategory_id,
             'product_name' => $request->product_name,
             'product_price' => $request->product_price,
-            'maincategory_id' => $request->maincategory_id,
             'brand_id' => $request->brand_id,
             'discount' => $request->discount,
             'short_desp' => $request->short_desp,
