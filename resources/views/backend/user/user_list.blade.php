@@ -52,7 +52,7 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item" href="{{route('user.edit', $user->id)}}">Edit</a>
-                                            <a class="dropdown-item" href="{{route('user.delete', $user->id)}}">Delete</a>
+                                            <a class="dropdown-item" href="{{route('user.single.delete', $user->id)}}">Delete</a>
                                         </div>
                                     </div>
                                 </td>

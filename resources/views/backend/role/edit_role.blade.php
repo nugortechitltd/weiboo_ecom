@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+{{-- @extends('layouts.dashboard')
 @section('content')
 <div class="breadcrumb-wrapper breadcrumb-contacts">
     <div>
@@ -6,14 +6,11 @@
         <p class="breadcrumbs"><span><a href="{{route('home')}}">Dashboard</a></span>
             <span><i class="mdi mdi-chevron-right"></i></span>Edit role</p>
     </div>
-    <div>
-        {{-- <a href="{{route('role.list')}}" class="btn btn-primary">All role</a> --}}
-    </div>
         
 </div>
 <div class="row">
     <div class="col-xl-8 col-lg-8 m-auto">
-        {{-- <div class="ec-cat-list card card-default mb-24px">
+        <div class="ec-cat-list card card-default mb-24px">
             <div class="card-body">
                 <div class="ec-cat-form">
                     <h4>Add permission</h4>
@@ -33,7 +30,7 @@
 
                 </div>
             </div>
-        </div> --}}
+        </div>
         <div class="ec-cat-list card card-default mb-24px">
             <div class="card-body">
                 <div class="ec-cat-form">
@@ -72,4 +69,4 @@
     </div>
     
 </div>
-@endsection
+@endsection --}}

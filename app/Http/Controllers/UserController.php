@@ -89,4 +89,10 @@ class UserController extends Controller
         }
         return back();
     }
+
+    //user_single_delete
+    function user_single_delete($user_id) {
+        User::find($user_id)->delete();
+        return back()->withSuccess('Successfully deleted');
+    }
 }

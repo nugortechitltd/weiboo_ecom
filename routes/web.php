@@ -65,6 +65,7 @@ Route::get('/password/forgot', [UserController::class, 'forgot_password'])->name
 Route::post('/password/reset/send', [UserController::class, 'password_reset_send'])->name('password.reset.send');
 Route::get('/password/reset/form/{token}', [UserController::class, 'password_reset_form'])->name('password.reset.form');
 Route::post('/password/reset/set/', [UserController::class, 'password_reset_set'])->name('password.reset.set');
+Route::get('user/single/delete/{user_id}', [UserController::class, 'user_single_delete'])->name('user.single.delete');
 
 // Profile
 Route::get('user/profile/', [ProfileController::class, 'profile'])->name('profile');
@@ -74,7 +75,6 @@ Route::post('user/profile/update', [ProfileController::class, 'profile_update'])
 Route::get('user/list/', [ProfileController::class, 'user_list'])->name('user.list');
 Route::get('user/edit/{user_id}', [ProfileController::class, 'user_edit'])->name('user.edit');
 Route::post('user/update/', [ProfileController::class, 'user_update'])->name('user.update');
-Route::get('user/delete/{user_id}', [ProfileController::class, 'user_delete'])->name('user.delete');
 
 
 // Category
@@ -314,13 +314,13 @@ Route::get('/deal/delete/{deal_id}', [DealController::class, 'deal_delete'])->na
 Route::get('/search/btn', [SearchController::class, 'search_btn'])->name('search.btn');
 
 // Role management
-Route::get('/role', [RoleController::class, 'role'])->name('role');
-Route::post('/permission/store', [RoleController::class, 'permission_store'])->name('permission.store');
-Route::post('/role/store', [RoleController::class, 'role_store'])->name('role.store');
-Route::post('/role/update', [RoleController::class, 'role_update'])->name('role.update');
-Route::post('/role/assign', [RoleController::class, 'role_assign'])->name('role.assign');
-Route::get('/remove/user/role/{user_id}', [RoleController::class, 'remove_user_role'])->name('remove.user.role');
-Route::get('/edit/user/role/{role_id}', [RoleController::class, 'edit_role'])->name('edit.role');
+// Route::get('/role', [RoleController::class, 'role'])->name('role');
+// Route::post('/permission/store', [RoleController::class, 'permission_store'])->name('permission.store');
+// Route::post('/role/store', [RoleController::class, 'role_store'])->name('role.store');
+// Route::post('/role/update', [RoleController::class, 'role_update'])->name('role.update');
+// Route::post('/role/assign', [RoleController::class, 'role_assign'])->name('role.assign');
+// Route::get('/remove/user/role/{user_id}', [RoleController::class, 'remove_user_role'])->name('remove.user.role');
+// Route::get('/edit/user/role/{role_id}', [RoleController::class, 'edit_role'])->name('edit.role');
 
 
 // Offer section

@@ -1,4 +1,4 @@
-@extends('layouts.dashboard')
+{{-- @extends('layouts.dashboard')
 @section('content')
 <div class="breadcrumb-wrapper breadcrumb-contacts">
     <div>
@@ -7,7 +7,6 @@
             <span><i class="mdi mdi-chevron-right"></i></span>Role</p>
     </div>
     <div>
-        {{-- <a href="{{route('role.list')}}" class="btn btn-primary">All role</a> --}}
     </div>
         
 </div>
@@ -71,7 +70,6 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item" href="{{route('edit.role', $role->id)}}">Edit</a>
-                                            {{-- <a class="dropdown-item" href="{{route('role.delete', $role->id)}}">Delete</a> --}}
                                         </div>
                                     </div>
                                 </td>
@@ -175,7 +173,6 @@
             <div class="card-body">
                 <div class="ec-cat-form">
                     <h4>Assign Role</h4>
-                    {{-- {{route('assign.role')}} --}}
                     <form class="row" method="POST" action="{{route('role.assign')}}">
                         @csrf
                         <div class="mb-3 col-md-12 col-xl-12">
@@ -206,4 +203,4 @@
     </div>
     
 </div>
-@endsection
+@endsection --}}
