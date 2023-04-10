@@ -21011,7 +21011,7 @@ div.copied {
 .sidebar .sidebar-inner > li > a {
   padding: 15px 25px;
   line-height: 20px;
-  color: #fff;
+  color: #343239;
   display: block;
   text-decoration: none;
   text-transform: uppercase;
@@ -21859,7 +21859,7 @@ div.copied {
   border-right: 1px solid #f3f3f3;
 }
 .ec-sidebar-light .sidebar .sub-menu {
-  background-color: #007DE5;
+  background-color: #f7f7f7;
 }
 .ec-sidebar-light .sidebar .sub-menu > li > a {
   color: #8a909d;
@@ -25444,6 +25444,3 @@ color: #777777;
 
 
 /* custom */
-.ec-navigation{
-  background-color: #0090EA;
-}
