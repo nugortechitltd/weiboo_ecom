@@ -264,7 +264,8 @@
                         <h2 class="title">FEATURED PRODUCT</h2>
                     </div>
                 </div>
-                <div class="row">
+                {{$featured}}
+                {{-- <div class="row">
                     @foreach ($featured as $product)
                     <div class="col-xl-3 col-md-4 col-sm-6 col-12">
                         <div class="product-item element-item1">
@@ -320,7 +321,7 @@
                         </div>
                     </div>
                     @endforeach
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
