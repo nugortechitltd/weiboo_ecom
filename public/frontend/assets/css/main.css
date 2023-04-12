@@ -24418,7 +24418,7 @@ button {
   border-radius: 100%;
   background: #fff;
 } */
-/* 
+
 [type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
   position: relative;
   padding-left: 28px;
@@ -24426,7 +24426,7 @@ button {
   line-height: 20px;
   display: inline-block;
   left: -30px;
-} */
+}
 
 .product-label > input[type="radio"]:checked + label, .product-label > input[type="radio"]:not(:checked) + label {
   position: relative;
@@ -24526,7 +24526,7 @@ button {
   margin-left: 10px;
 }
 
-/* [type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
   content: '';
   width: 0;
   height: 0;
@@ -24537,7 +24537,7 @@ button {
   border-radius: 100%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
-} */
+}
 
 .fa-check:before {
   content: "\f00c";
