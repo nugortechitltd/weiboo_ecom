@@ -24550,8 +24550,10 @@ button {
   position: relative;
   left: -15px;
 }
-
-.rate:not(:checked) > label {
+.rate:not(:checked) > label:before {
+  content: '★'!important;
+}
+/* .rate:not(:checked) > label {
     float: right;
     width: 0em;
     overflow: hidden;
@@ -24579,7 +24581,7 @@ button {
   background: #fff;
 }
 
-/* [type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+.star-label > input[type="radio"]:checked + label:after, .star-label > input[type="radio"]:not(:checked) + label:after {
   content: '';
   width: 0;
   height: 0;
