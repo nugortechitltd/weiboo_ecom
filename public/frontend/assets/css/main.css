@@ -24341,7 +24341,7 @@ button {
   color:#ccc;
 }
 .rate:not(:checked) > label:before {
-  content: '★';
+  content: '★'!important;
 }
 .rate > input:checked ~ label {
   color: #ffc700;    
