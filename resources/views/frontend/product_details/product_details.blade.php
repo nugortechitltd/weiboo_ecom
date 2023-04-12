@@ -115,7 +115,7 @@
                                 <div class="text-left pb-0 pt-2" id="size_id">
                                     @if ($color != null)
                                         @foreach ($sizes as $size)
-                                        <div class="form-check size-option form-option form-check-inline mb-2 product-label">
+                                        <div class="form-check size-option form-option form-check-inline mb-2 size-label">
                                             <input class="form-check-input" value="{{$size->id}}" type="radio" name="size_id" id="size{{$size->id}}">
                                             <label class="form-option-label product__details__label form-option-size" for="size{{$size->id}}"><span>{{$size->size_name}}</span></label>
                                         </div>
@@ -123,12 +123,12 @@
                                     @else
                                     @foreach (App\Models\Inventory::where('product_id', $details->first()->id)->get() as $size)
                                     @if ($size->rel_to_size->id == 1)
-                                    <div class="form-check size-option form-option form-check-inline mb-2 product-label">
+                                    <div class="form-check size-option form-option form-check-inline mb-2 size-label">
                                         <input class="form-check-input" value="{{$size->rel_to_size->id}}" type="radio" name="size_id" id="size{{$size->id}}">
                                         <label class="form-option-label product__details__label form-option-size" for="size{{$size->id}}"><span>{{$size->size_name}}</span></label>
                                     </div>
                                     @else
-                                    <div class="form-check size-option form-option form-check-inline mb-2 product-label">
+                                    <div class="form-check size-option form-option form-check-inline mb-2 size-label">
                                         <input class="form-check-input" value="{{$size->rel_to_size->id}}" type="radio" name="size_id" id="size{{$size->id}}">
                                         <label class="form-option-label product__details__label form-option-size" for="size{{$size->id}}"><span>{{$size->size_name}}</span></label>
                                     </div>

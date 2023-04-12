@@ -24450,7 +24450,7 @@ button {
   visibility: hidden;
   border: 1px solid #ddd;
   border-radius: 100%;
-  left: -20px;
+  left: -30px;
 }
 
 /* .star [type="radio"]:checked + label:before, .star [type="radio"]:not(:checked) + label:before  {
@@ -24508,3 +24508,9 @@ button {
 .form-option-size {
   margin-left: 15px;
 }
+
+.size-label > input[type="radio"]:not(:checked) + label, .size-label > input[type="radio"]:checked + label{
+  position: relative;
+  left: -15px;
+}
+
