@@ -24418,7 +24418,7 @@ button {
   border-radius: 100%;
   background: #fff;
 } */
-
+/* 
 [type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
   position: relative;
   padding-left: 28px;
@@ -24426,7 +24426,7 @@ button {
   line-height: 20px;
   display: inline-block;
   left: -30px;
-}
+} */
 
 .product-label > input[type="radio"]:checked + label, .product-label > input[type="radio"]:not(:checked) + label {
   position: relative;
