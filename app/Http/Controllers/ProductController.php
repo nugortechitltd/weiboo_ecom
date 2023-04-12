@@ -56,7 +56,7 @@ class ProductController extends Controller
             'long_desc.required' => 'The description field is required.',
             'short_desp.required' => 'The short description field is required.',
         ]);
-        $deactive = 0;
+        $active = 1;
         
         $product_id = Product::insertGetId([
             'category_id' => $request->category_id,
@@ -67,7 +67,7 @@ class ProductController extends Controller
             'discount' => $request->discount,
             'short_desp' => $request->short_desp,
             'long_desc' => $request->long_desc,
-            'featured' => $deactive,
+            'featured' => $active,
             'additional_desc' => $request->additional_desc,
             'slug' => str_replace(' ', '-', Str::lower($request->product_name)).'-'.rand(1000, 9999),
             'after_discount' => $request->product_price - ($request->product_price * $request->discount)/100,

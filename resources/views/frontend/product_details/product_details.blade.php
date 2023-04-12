@@ -44,20 +44,7 @@
                                 <span class="product-catagory">{{App\Models\Category::where('id', $details->first()->category_id)->first()->category_name}}</span>
                                 <div class="rating-stars-group">
                                     
-                                    {{-- <div class="rating-star">
-                                        @foreach ($reviews as $review)
-                                        @for ($i = 1; $i <= $review->star; $i++)
-                                            <i class="fas fa-star"></i>
-                                        @endfor
-                                        <?php
-                                        $l = 5 - $review->star;
-                                        ?>
-                                        @for ($j = 1; $j <= $l; $j++)
-                                            <i class="far fa-star"></i>
-                                        @endfor
-                                        
-                                        @endforeach
-                                    </div> --}}
+                                    
                                     @php
                                         $total_review = App\Models\OrderProduct::where('product_id', $details->first()->id)->where('review', '!=', null)->count();
                                         $total_star = App\Models\OrderProduct::where('product_id', $details->first()->id)->where('review', '!=', null)->sum('star');
@@ -80,7 +67,7 @@
                                     <span> {{$total_star}} Reviews</span>
                                 </div>
                             </div>
-                            <h2 class="product-title">{{$details->first()->product_name}} <span class="stock">In Stock</span></h2>
+                            <h2 class="product-title">{{$details->first()->product_name}}</h2>
                             <input type="hidden" name="product_id" value="{{ $details->first()->id }}">
                             @if ($details->first()->discount != null)
                             <span class="product-price"><span class="old-price">{{$details->first()->product_price}} Tk</span> {{$details->first()->after_discount}} Tk</span>
@@ -99,14 +86,14 @@
                                 @endphp
                                 @foreach ($available_colors as $color)
                                     @if ($color->rel_to_color->color_code == null)
-                                        <div class="form-check form-option form-check-inline mb-1">
+                                        <div class="form-check form-option form-check-inline mb-1 product-label">
                                             <input class="form-check-input colorId" type="radio" value="1" name="color_id" id="color{{ $color->rel_to_color->id }}">
                                             <label class="form-option-label product__details__label rounded-circle" style="background: {{ $color->rel_to_color->color_name }}" for="color{{ $color->rel_to_color->id }}">
                                                 <span class="form-option-color rounded-circle">NA</span>
                                             </label>
                                         </div>
                                     @else
-                                        <div class="form-check form-option form-check-inline mb-1">
+                                        <div class="form-check form-option form-check-inline mb-1 product-label">
                                             <input class="form-check-input colorId" type="radio" value="{{ $color->rel_to_color->id }}" name="color_id" id="color{{ $color->rel_to_color->id }}">
                                             <label class="form-option-label product__details__label rounded-circle" style="background: {{ $color->rel_to_color->color_name }}" for="color{{ $color->rel_to_color->id }}">
                                                 <span class="form-option-color rounded-circle"></span>
@@ -128,22 +115,22 @@
                                 <div class="text-left pb-0 pt-2" id="size_id">
                                     @if ($color != null)
                                         @foreach ($sizes as $size)
-                                        <div class="form-check size-option form-option form-check-inline mb-2">
+                                        <div class="form-check size-option form-option form-check-inline mb-2 product-label">
                                             <input class="form-check-input" value="{{$size->id}}" type="radio" name="size_id" id="size{{$size->id}}">
-                                            <label class="form-option-label product__details__label" for="size{{$size->id}}">{{$size->size_name}}</label>
+                                            <label class="form-option-label product__details__label form-option-size" for="size{{$size->id}}"><span>{{$size->size_name}}</span></label>
                                         </div>
                                         @endforeach
                                     @else
                                     @foreach (App\Models\Inventory::where('product_id', $details->first()->id)->get() as $size)
                                     @if ($size->rel_to_size->id == 1)
-                                    <div class="form-check size-option form-option form-check-inline mb-2">
+                                    <div class="form-check size-option form-option form-check-inline mb-2 product-label">
                                         <input class="form-check-input" value="{{$size->rel_to_size->id}}" type="radio" name="size_id" id="size{{$size->id}}">
-                                        <label class="form-option-label product__details__label" for="size{{$size->id}}">{{$size->rel_to_size->size_name}}</label>
+                                        <label class="form-option-label product__details__label form-option-size" for="size{{$size->id}}"><span>{{$size->size_name}}</span></label>
                                     </div>
                                     @else
-                                    <div class="form-check size-option form-option form-check-inline mb-2">
+                                    <div class="form-check size-option form-option form-check-inline mb-2 product-label">
                                         <input class="form-check-input" value="{{$size->rel_to_size->id}}" type="radio" name="size_id" id="size{{$size->id}}">
-                                        <label class="form-option-label product__details__label" for="size{{$size->id}}">{{$size->rel_to_size->size_name}}</label>
+                                        <label class="form-option-label product__details__label form-option-size" for="size{{$size->id}}"><span>{{$size->size_name}}</span></label>
                                     </div>
                                     @endif
                                     @endforeach
@@ -265,15 +252,15 @@
                                                                         <p>Your Rating :</p>
                                                                         <div class="rate">
                                                                             <input type="radio" id="star5" name="rate" value="5" />
-                                                                            <label for="star5" title="text">5 stars</label>
+                                                                            <label for="star5" class="star" title="text">5 stars</label>
                                                                             <input type="radio" id="star4" name="rate" value="4" />
-                                                                            <label for="star4" title="text">4 stars</label>
+                                                                            <label for="star4" class="star" title="text">4 stars</label>
                                                                             <input type="radio" id="star3" name="rate" value="3" />
-                                                                            <label for="star3" title="text">3 stars</label>
+                                                                            <label for="star3" class="star" title="text">3 stars</label>
                                                                             <input type="radio" id="star2" name="rate" value="2" />
-                                                                            <label for="star2" title="text">2 stars</label>
+                                                                            <label for="star2" class="star" title="text">2 stars</label>
                                                                             <input type="radio" id="star1" name="rate" value="1" />
-                                                                            <label for="star1" title="text">1 star</label>
+                                                                            <label for="star1" class="star" title="text">1 star</label>
                                                                         </div>
                                                                 </div>
                                                                 {{-- Hidden file --}}

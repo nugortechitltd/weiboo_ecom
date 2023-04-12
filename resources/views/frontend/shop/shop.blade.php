@@ -34,7 +34,7 @@
                                     <div class="category-title-area">
                                         <span class="point"></span>
                                         {{-- <option class="category_id" value="{{$main->id}}">{{$main->category_name}}({{App\Models\Product::where('category_id', $main->id)->count()}})</option> --}}
-                                        <div>
+                                        <div class="category-label">
                                             <input id="category{{$category->id}}" class="category_id" name="category" type="radio" value="{{$category->id}}" {{($category->id == @$_GET['category_id'])?'checked': ''}}>
                                             <label for="category{{$category->id}}" class="checkbox-custom-label">{{$category->category_name}}</label>
                                         </div>
@@ -80,8 +80,8 @@
                                 <span class="action-title">Color</span>
                             </div>
                             @foreach ($colors as $color)
-                            <div class="color-item  form-option form-check-inline mb-1">
-                                <span class="color" style="background-color: {{$color->color_code}}; border: 1px solid {{$color->color_code == null ? 'black': 'transparent'}}">
+                            <div class="color-item  form-option form-check-inline mb-1 category-label">
+                                <span class="color" style="background-color: {{$color->color_code}}; border: 1px solid #333">
                                 <i class="fas fa-check"></i>
                                 </span>
                                 <input class="color_id" type="radio" name="color_id" id="color{{$color->id}}" value="{{$color->id}}" {{$color->id == @$_GET['color_id'] ? 'checked' : ''}}>
@@ -100,7 +100,7 @@
                                         <div class="category-item-inner">
                                             <div class="category-title-area d-block text-capitalize d-block">
                                                 @foreach ($brands as $brand)
-                                               <div>
+                                               <div class="category-label">
                                                     <input class="brand_id" type="radio" name="brand_id" id="brand{{$brand->id}}" value="{{$brand->id}}" {{$brand->id == @$_GET['brand_id'] ? 'checked' : ''}}>
                                                     <label for="brand{{$brand->id}}">{{$brand->brand_name}}</label>
                                                </div>

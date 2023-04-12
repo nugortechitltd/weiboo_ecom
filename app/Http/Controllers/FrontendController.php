@@ -37,6 +37,11 @@ class FrontendController extends Controller
         $deals = Deal::latest()->take(1)->get();
         $poster = Poster::latest()->take(1)->get();
         $blog_latest = Blog::latest()->take(3)->get();
+
+        $total_review = Orderproduct::where('product_id', $featured->first()->id)->where('review', '!=', null)->count();
+        $total_star = OrderProduct::where('product_id', $featured->first()->id)->where('review', '!=', null)->sum('star');
+
+        
         return view('frontend.index.index', [
             'categories' => $categories,
             'maincategories' => $maincategories,
@@ -49,6 +54,8 @@ class FrontendController extends Controller
             'deals' => $deals,
             'poster' => $poster,
             'blog_latest' => $blog_latest,
+            'total_review' => $total_review,
+            'total_star' => $total_star,
         ]);
     }
 
@@ -94,7 +101,7 @@ class FrontendController extends Controller
         foreach ($sizes as $size) {
         $str .= '<div class="form-check size-option form-option form-check-inline mb-2">
         <input class="form-check-input" value="'.$size->rel_to_size->id.'" type="radio" name="size_id" id="size'.$size->rel_to_size->id.'">
-        <label class="form-option-label" for="size'.$size->rel_to_size->id.'">'.$size->rel_to_size->size_name.'</label>
+        <label class="form-option-label form-option-size" for="size'.$size->rel_to_size->id.'"><span >'.$size->rel_to_size->size_name.'</span></label>
         </div>';
         }
 

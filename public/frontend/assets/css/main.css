@@ -24405,7 +24405,7 @@ button {
 }
 
 
-[type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
+/* [type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
   content: '';
   position: absolute;
   left: 0;
@@ -24417,7 +24417,7 @@ button {
   border: 1px solid #ddd;
   border-radius: 100%;
   background: #fff;
-}
+} */
 
 [type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
   position: relative;
@@ -24425,7 +24425,64 @@ button {
   cursor: pointer;
   line-height: 20px;
   display: inline-block;
-  left: -15px;
+  left: -30px;
+}
+
+.product-label > input[type="radio"]:checked + label, .product-label > input[type="radio"]:not(:checked) + label {
+  position: relative;
+  /* padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block; */
+  left: -10px;
+}
+
+.category-label > input[type="radio"]:checked + label:before,
+.category-label > input[type="radio"]:not(:checked) + label:before
+{
+  content: '';
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  visibility: hidden;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  left: -20px;
+}
+
+/* .star [type="radio"]:checked + label:before, .star [type="radio"]:not(:checked) + label:before  {
+  content: '';
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  opacity: 1;
+  visibility: hidden;
+  border: 1px solid #ddd;
+  border-radius: 100%;
+  left: -20px;
+  background: red;
+} */
+
+/* .star[type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+  left: -10px;
+} */
+.star::before {
+  border: transparent!important;
+}
+.rate:not(:checked) > label {
+  float: right;
+  width: 0em;
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
 }
 .product__details__label {
   position: relative;
@@ -24447,4 +24504,7 @@ button {
 
 .fa-check:before {
   content: "\f00c";
+}
+.form-option-size {
+  margin-left: 15px;
 }

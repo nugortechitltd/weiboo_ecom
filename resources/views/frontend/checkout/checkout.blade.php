@@ -111,13 +111,24 @@
                             </div>
                     </div>
                 </div>
+
+                {{-- <div class="color-item  form-option form-check-inline mb-1">
+                    <span class="color" style="background-color: #FF0000; border: 1px solid #333">
+                    <i class="fas fa-check"></i>
+                    </span>
+                    <input class="color_id" type="radio" name="color_id" id="color1" value="1" checked="">
+                    <label for="color1">Red</label>
+                    <div class="color-arrow"><i class="far fa-long-arrow-right"></i></div>
+                </div> --}}
                 <div class="action-item m-0">
-                    <div class="mb-3">
-                            <div class="form-check">
+                    <div class="mb-3 checkout">
+                            <div class="form-check category-label">
+                                <i class="fas fa-money-bill"></i>
                                 <input class="form-check-input" type="radio" name="payment_method" value="1" id="c1" checked>
                                 <label class="form-check-label" for="c1">Cash on delivery</label>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check category-label">
+                                <i class="fas fa-money-bill-alt"></i>
                                 <input class="form-check-input" type="radio" name="payment_method" value="2" id="c2" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" @error('bkashtran_number') checked @enderror @error('bkashtran_id') checked @enderror>
                                 <label class="form-check-label" for="c2">bKash payment</label>
                                 <div class="collapse  @error('bkashtran_number') show @enderror @error('bkashtran_id') show @enderror" id="collapseExample">
@@ -145,7 +156,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-check">
+                            <div class="form-check category-label">
+                                <i class="fas fa-money-bill-alt"></i>
                                 <input class="form-check-input" type="radio" name="payment_method" value="3" id="c3" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" @error('tran_number') checked @enderror @error('tran_id') checked @enderror>
                                 <label class="form-check-label" for="c3">Rocket payment</label>
                                 <div class="collapse multi-collapse  @error('tran_number') show @enderror @error('tran_id') show @enderror" id="collapseExample2">
