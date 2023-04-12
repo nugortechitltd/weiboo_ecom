@@ -122,12 +122,12 @@
                 </div> --}}
                 <div class="action-item m-0">
                     <div class="mb-3 checkout">
-                            <div class="form-check category-label">
+                            <div class="form-check payment-label">
                                 <i class="fas fa-money-bill"></i>
                                 <input class="form-check-input" type="radio" name="payment_method" value="1" id="c1" checked>
                                 <label class="form-check-label" for="c1">Cash on delivery</label>
                             </div>
-                            <div class="form-check category-label">
+                            <div class="form-check payment-label">
                                 <i class="fas fa-money-bill-alt"></i>
                                 <input class="form-check-input" type="radio" name="payment_method" value="2" id="c2" data-bs-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample" @error('bkashtran_number') checked @enderror @error('bkashtran_id') checked @enderror>
                                 <label class="form-check-label" for="c2">bKash payment</label>
@@ -156,7 +156,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form-check category-label">
+                            <div class="form-check payment-label">
                                 <i class="fas fa-money-bill-alt"></i>
                                 <input class="form-check-input" type="radio" name="payment_method" value="3" id="c3" data-bs-toggle="collapse" href="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2" @error('tran_number') checked @enderror @error('tran_id') checked @enderror>
                                 <label class="form-check-label" for="c3">Rocket payment</label>
