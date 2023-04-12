@@ -22,7 +22,7 @@
                             <div class="cursor"></div>
                             @foreach ($thumbnails as $list => $thumbnail)
                                 <div class="thumb-wrapper {{ $thumbnail->id }} filterd-items {{ $list == 0 ? 'figure' : 'hide' }} ">
-                                    <div class="product-thumb zoom" onmousemove="zoom(event)"
+                                    <div class="product-thumb"
                                         style="background-image: url({{ asset('uploads/products/thumbnail') }}/{{ $thumbnail->thumbnail }})">
                                         <img src="{{ asset('uploads/products/thumbnail') }}/{{ $thumbnail->thumbnail }}"
                                             alt="product-thumb">
