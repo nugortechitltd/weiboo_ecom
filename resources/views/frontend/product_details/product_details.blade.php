@@ -21,7 +21,7 @@
                         <div class="product-thumb-area">
                             <div class="cursor"></div>
                             @foreach ($thumbnails as $list => $thumbnail)
-                                <div class="thumb-wrapper {{ $thumbnail->id }} filterd-items {{ $list == 1 ? 'figure' : 'hide' }} ">
+                                <div class="thumb-wrapper {{ $thumbnail->id }} filterd-items {{ $list == 0 ? 'figure' : 'hide' }} ">
                                     <div class="product-thumb zoom" onmousemove="zoom(event)"
                                         style="background-image: url({{ asset('uploads/products/thumbnail') }}/{{ $thumbnail->thumbnail }})">
                                         <img src="{{ asset('uploads/products/thumbnail') }}/{{ $thumbnail->thumbnail }}"
@@ -31,7 +31,7 @@
                             @endforeach
                             <div class="product-thumb-filter-group">
                                 @foreach ($thumbnails as $sl => $thumbnail)
-                                <div class="thumb-filter filter-btn {{ $sl == 1 ? 'active' : '' }}" data-show=".{{ $thumbnail->id }}"><img
+                                <div class="thumb-filter filter-btn {{ $sl == 0 ? 'active' : '' }}" data-show=".{{ $thumbnail->id }}"><img
                                         src="{{ asset('uploads/products/thumbnail') }}/{{ $thumbnail->thumbnail }}" alt="product-thumb-filter">
                                 </div>
                                 @endforeach
