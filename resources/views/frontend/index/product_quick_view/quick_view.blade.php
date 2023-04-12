@@ -42,7 +42,7 @@
                 <span>{{$total_star}} Reviews</span>
             </div>
         </div>
-        {{-- <h2 class="product-title">{{$product->product_name}}<span class="stock">In Stock</span></h2> --}}
+        <h2 class="product-title">{{$product->product_name}}</h2>
         @if ($product->discount != null)
         <span class="product-price"><span class="old-price">{{$product->product_price}} Tk</span> {{$product->after_discount}} Tk</span>
         @else
