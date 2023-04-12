@@ -24404,36 +24404,8 @@ button {
   color: #111111;
 }
 
-
-/* [type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0;
-  height: 0;
-  opacity: 0;
-  visibility: hidden;
-  border: 1px solid #ddd;
-  border-radius: 100%;
-  background: #fff;
-} */
-
-[type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+/* .product-label > input[type="radio"]:checked + label, .product-label > input[type="radio"]:not(:checked) + label {
   position: relative;
-  padding-left: 28px;
-  cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
-  left: -30px;
-}
-
-.product-label > input[type="radio"]:checked + label, .product-label > input[type="radio"]:not(:checked) + label {
-  position: relative;
-  /* padding-left: 28px;
-  cursor: pointer;
-  line-height: 20px;
-  display: inline-block; */
   left: -10px;
 }
 
@@ -24489,25 +24461,6 @@ button {
   -ms-transition:;
   -o-transition:;
 }
-
-/* .star [type="radio"]:checked + label:before, .star [type="radio"]:not(:checked) + label:before  {
-  content: '';
-  position: relative;
-  left: 0;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  opacity: 1;
-  visibility: hidden;
-  border: 1px solid #ddd;
-  border-radius: 100%;
-  left: -20px;
-  background: red;
-} */
-
-/* .star[type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
-  left: -10px;
-} */
 .star::before {
   border: transparent!important;
 }
@@ -24549,47 +24502,4 @@ button {
 .size-label > input[type="radio"]:not(:checked) + label, .size-label > input[type="radio"]:checked + label{
   position: relative;
   left: -15px;
-}
-.rate:not(:checked) > label:before {
-  content: '★'!important;
-}
-/* .rate:not(:checked) > label {
-    float: right;
-    width: 0em;
-    overflow: hidden;
-    white-space: nowrap;
-    margin-left: 20px;
-    cursor: pointer;
-    font-size: 30px;
-    color: #ccc;
-}
-.rate:not(:checked) > label:before {
-  content: '★';
-}
-.rate:not(:checked) > label:hover, .rate:not(:checked) > label:hover ~ label {
-  color: #deb217;
-}
-.star-label > input[type="radio"]:checked + label:before, .star-label > input[type="radio"]:not(:checked) + label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #ddd;
-  border-radius: 100%;
-  background: #fff;
-}
-
-.star-label > input[type="radio"]:checked + label:after, .star-label > input[type="radio"]:not(:checked) + label:after {
-  content: '';
-  width: 0;
-  height: 0;
-  background: #e42d29;
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 } */
