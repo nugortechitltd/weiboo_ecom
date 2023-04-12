@@ -27,8 +27,9 @@ class FrontendController extends Controller
         $categories = Category::all();
         $maincategories = Maincategory::all();
         $products = Product::latest()->take(9)->get();
-        $featured = Product::where('featured', '1')->get();
+        // $featured = Product::where('featured', '1')->get();
         // $featured = Product::where('featured', '1')->take(4)->get();
+        $featured = Product::all();
         $brands = Brand::latest()->take(6)->get();
         $coupon = Coupon::all();
         $site = Aboutus::latest()->take(1);
