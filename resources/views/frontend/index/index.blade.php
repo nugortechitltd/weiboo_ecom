@@ -416,7 +416,8 @@
                             <div class="swiper-wrapper">
                                 @foreach ($brands as $brand)
                                 <div class="swiper-slide">
-                                    <a class="brand-front" href="#"><img src="{{asset('uploads/brand')}}/{{$brand->brand_image}}"alt="Brand Logo"></a>
+                                    <img src="{{asset('uploads/brand')}}/{{$brand->brand_image}}"alt="Brand Logo">
+                                    {{-- <a class="brand-front" href="#"><img src="{{asset('uploads/brand')}}/{{$brand->brand_image}}"alt="Brand Logo"></a> --}}
                                 </div>
                                 @endforeach
                             </div>
