@@ -264,24 +264,23 @@
                         <h2 class="title">FEATURED PRODUCT</h2>
                     </div>
                 </div>
-                {{$featured}}
-                {{-- <div class="row">
-                    @foreach ($featured as $product)
+                <div class="row">
+                    @foreach ($featured as $feat_product)
                     <div class="col-xl-3 col-md-4 col-sm-6 col-12">
                         <div class="product-item element-item1">
-                            <a href="{{route('product.details', $product->slug)}}" class="product-image image-hover-variations">
+                            <a href="{{route('product.details', $feat_product->slug)}}" class="product-image image-hover-variations">
                                 <div class="image-vari1 image-vari"><img
-                                        src="{{asset('uploads/products/preview')}}/{{$product->preview_one}}" alt="product-image">
+                                        src="{{asset('uploads/products/preview')}}/{{$feat_product->preview_one}}" alt="product-image">
                                 </div>
                                 <div class="image-vari2 image-vari"><img
-                                        src="{{asset('uploads/products/preview')}}/{{$product->preview_two}}" alt="product-image">
+                                        src="{{asset('uploads/products/preview')}}/{{$feat_product->preview_two}}" alt="product-image">
                                 </div>
                             </a>
                             <div class="bottom-content">
                                 <div class="star-rating">
                                     @php
-                                        $total_review = App\Models\OrderProduct::where('product_id', $product->id)->where('review', '!=', null)->count();
-                                        $total_star = App\Models\OrderProduct::where('product_id', $product->id)->where('review', '!=', null)->sum('star');
+                                        $total_review = App\Models\OrderProduct::where('product_id', $feat_product->id)->where('review', '!=', null)->count();
+                                        $total_star = App\Models\OrderProduct::where('product_id', $feat_product->id)->where('review', '!=', null)->sum('star');
 
                                         $total_rating = 0;
                                         if($total_review != 0) {
@@ -299,9 +298,9 @@
                                     @endphp
                                     
                                 </div>
-                                <a href="{{route('product.details', $product->slug)}}" class="product-name">{{$product->product_name}}</a>
+                                <a href="{{route('product.details', $feat_product->slug)}}" class="product-name">{{$feat_product->product_name}}</a>
                                 <div class="action-wrap">
-                                    <span class="price">{{$product->after_discount}} Tk</span>
+                                    <span class="price">{{$feat_product->after_discount}} Tk</span>
                                 </div>
                             </div>
                             <div class="quick-action-button">
@@ -309,19 +308,19 @@
                                     <a href="#"><i class="rt-plus"></i></a>
                                 </div>
                                 <div class="cta-single cta-quickview">  
-                                    <button id="{{$product->id}}" class="eye_id product-details-popup-btn"><i class="far fa-eye"></i></button>
+                                    <button id="{{$feat_product->id}}" class="eye_id product-details-popup-btn"><i class="far fa-eye"></i></button>
                                 </div>
                                 <div class="cta-single cta-wishlist">
-                                    <a href="{{route('wishlist.add.single', $product->id)}}"><i class="far fa-heart"></i></a>
+                                    <a href="{{route('wishlist.add.single', $feat_product->id)}}"><i class="far fa-heart"></i></a>
                                 </div>
                                 <div class="cta-single cta-addtocart">
-                                    <a href="{{route('cart.add.single', $product->id)}}"><i class="rt-basket-shopping"></i></a>
+                                    <a href="{{route('cart.add.single', $feat_product->id)}}"><i class="rt-basket-shopping"></i></a>
                                 </div>
                             </div>
                         </div>
                     </div>
                     @endforeach
-                </div> --}}
+                </div>
             </div>
         </div>
     </div>
