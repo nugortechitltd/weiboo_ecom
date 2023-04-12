@@ -250,7 +250,7 @@
                                                                 </div>
                                                                 <div class="col-lg-12">
                                                                         <p>Your Rating :</p>
-                                                                        <div class="rate">
+                                                                        <div class="rate star-label">
                                                                             <input type="radio" id="star5" name="rate" value="5" />
                                                                             <label for="star5" class="star" title="text">5 stars</label>
                                                                             <input type="radio" id="star4" name="rate" value="4" />
