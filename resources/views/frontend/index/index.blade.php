@@ -278,7 +278,7 @@
                             </a>
                             <div class="bottom-content">
                                 <div class="star-rating">
-                                    @php
+                                    {{-- @php
                                         $total_review = App\Models\OrderProduct::where('product_id', $feat_product->id)->where('review', '!=', null)->count();
                                         $total_star = App\Models\OrderProduct::where('product_id', $feat_product->id)->where('review', '!=', null)->sum('star');
 
@@ -296,7 +296,7 @@
                                             echo '<i class="far fa-star"></i>';
                                         }
                                     @endphp
-                                    
+                                     --}}
                                 </div>
                                 <a href="{{route('product.details', $feat_product->slug)}}" class="product-name">{{$feat_product->product_name}}</a>
                                 <div class="action-wrap">
@@ -305,7 +305,7 @@
                             </div>
                             <div class="quick-action-button">
                                 <div class="cta-single cta-plus">
-                                    <a href="#"><i class="rt-plus"></i></a>
+                                    <a href=""><i class="rt-plus"></i></a>
                                 </div>
                                 <div class="cta-single cta-quickview">  
                                     <button id="{{$feat_product->id}}" class="eye_id product-details-popup-btn"><i class="far fa-eye"></i></button>
