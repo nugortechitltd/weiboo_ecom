@@ -25,7 +25,7 @@
                 <a class="btn-1" href="{{route('site')}}"><i class="fal fa-long-arrow-left"></i> Go To Homepage</a>
                 <h3>
                     Let's track your order or
-                    <a class="btn-2" href="contact.html"> Contact Us</a>
+                    <a class="btn-2" href="{{route('contact')}}"> Contact Us</a>
                 </h3>
             </div>
         </div>
