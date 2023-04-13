@@ -7,7 +7,7 @@
                     <div class="col-xl-2 col-md-4 col-sm-12 gutter-1">
                         <div class="catagory-sidebar">
                             <div class="widget-bg">
-                                <h2 class="widget-title">All Categories <i class="rt-angle-down"></i></h2>
+                                <h2 class="widget-title">All Categoriess<i class="rt-angle-down"></i></h2>
                                 <nav>
                                     <ul>
                                         @foreach ($categories as $category)
